@@ -10,7 +10,7 @@ _start
  binsh:
   .string "/bin/sh"
   
-  ;save file as shellcode.s and compile like this `gcc -static nosdtlib -o shellcode-elf shellcode.s`
+  ;save file as shellcode.s and compile like this `gcc -static -nosdtlib -o shellcode-elf shellcode.s`
   ;then dump the raw shellcode `objcopy --dump-section .text=shellcode-raw shellcode-elf
   ;after that it can be redirected into the target challenge with cat
   ;cat shellcode-raw | ./challenge_1
