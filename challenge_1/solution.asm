@@ -7,7 +7,7 @@ _start
   mov rax, 59
   lea rdi, [binsh]
   
- binsh
+ binsh:
   .string "/bin/sh"
   
   ;save file as shellcode.s and compile like this `gcc -static nosdtlib -o shellcode-elf shellcode.s`
