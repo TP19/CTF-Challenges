@@ -1,4 +1,4 @@
-global _start
+.global _start
 .intel_syntax noprefix
 _start:
         // calling openat(3 (outside of jail dirfd, "../flag", 0 (read-only))
