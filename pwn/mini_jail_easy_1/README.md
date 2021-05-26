@@ -16,7 +16,7 @@ compile the source c file like this `gcc mini_jail_easy_1.c -o mini_jail_easy_1`
 
 After that make sure the user is not root. Then make a flag file with your flag and make it accesible only by root like this chmod 700 flag
 
-Then make this challenge only executable by the user sudo chmod 771 challenge_1.
+Then make this challenge only executable by the user sudo chmod 771 mini_jail_easy_1.
 
 You also might want to chown both the flag and the challenge `sudo chown root:root flag` `sudo chown root:root mini_jail_easy_1`
 
