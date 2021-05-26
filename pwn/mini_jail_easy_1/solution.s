@@ -35,4 +35,4 @@ path:
 // cat solution-raw | ./mini_jail_easy_1 /an_existing_folder
 // another folder is necessary in the directory where the challenge is located. 
 // escaping from chroot requires another directory.
-// The code will use the syscall openat to read the flag outside of the jail directory.
+// The code will use the syscall openat to open the directory outside of the jail.
